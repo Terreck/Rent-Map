@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html class="I LIKE TOFU AND KIMCHI">
+<html manifest="url.appcache">
+<html lang="en-US">
+
+<title>East Harlem Rent Data Map</title>
+
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width"/>
+<meta name="Keywords" content="Rent, Data, Map, East, Harlem, New York City"/>
+<meta name="Description" content="Rent Data on East Harlem"/>
+<meta name="HandheldFriendly" content="True/>
+
+<style>
+
+@import url(come.up.with.leaflet.css);
+@import url(come.up.with.style.css);
+
+#map {
+	width: 960px;
+	height: 500px;
+}
+
+svg {
+	position: relative;
+}
+
+path {
+	fil: #000;
+	fill-opacity: .2;
+	stroke: #fff;
+	stroke-width: 1.5px;
+}
+
+path:hover {
+	fill: green;
+	fill-opacity: .7;
+}
+
+</style>
+
+<header>
+	<a href="http://en.wikipedia.org/wiki/East_Harlem" rel="Focus">East Harlem</a>
+</header>
+
+<p>This is an attempt at creating a map to help residents analyze and better comprehend the ebb and flow of rent prices in the East Harlem area.
+
+<p>
+
+<p id="map">
+
+<footer>
+</footer>
+script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.2/leaflet.js"></script>
+
+var map = new L.Map("map", {center: [37.8, -96.9], zoom: 4})
+    .addLayer(new L.TileLayer(""));
+
+var svg = d3.select(map.getPanes().overlayPane).append("svg"),
+    g = svg.append("g").attr("class", "leaflet-zoom-hide");
