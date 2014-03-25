@@ -51,11 +51,13 @@ path:hover {
 
 <footer>
 </footer>
-script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.2/leaflet.js"></script>
-
+<script>
 var map = new L.Map("map", {center: [37.8, -96.9], zoom: 4})
-    .addLayer(new L.TileLayer(""));
+    .addLayer(new L.TileLayer("https://a.tiles.mapbox.com/v3/terreck.hk2khe0p/page.html?secure=1#14/40.8018/-73.9310"));
 
 var svg = d3.select(map.getPanes().overlayPane).append("svg"),
     g = svg.append("g").attr("class", "leaflet-zoom-hide");
+
+</script>
