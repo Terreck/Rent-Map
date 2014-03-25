@@ -7,4 +7,4 @@ I am presently learning and trying out almost every function of every tidbit of 
 
 I have used the basic tile layer from Mapbox.
 
-I created GeoJSON file from shape files found <a href="http://www.nyc.gov/html/dcp/html/bytes/dwnzdata.shtml">here</a>
+I created GeoJSON file from shape files found <a href="http://www.nyc.gov/html/dcp/html/bytes/dwnzdata.shtml">here</a> by following the command lines published by dwtkns <a href="https://github.com/dwtkns/gdal-cheat-sheet">here</a>.
