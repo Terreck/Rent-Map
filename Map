@@ -64,7 +64,7 @@ var map = new L.Map("map", {center: [30. 30], 4})
 var svg = d3.select(map.getPanes().overlayPane).append("svg"),
     g = svg.append("g").attr("class", "leaflet-zoom-hide");
 
-d3.json("/home/turniphead/shape-files/nycdata/shap/NYC.json", function(collection) {
+d3.json("/nyan/nyan/NYC.json", function(collection) {
 
 var transform = d3.gro.transform({point: projectPoint}),
 	path=d3.geo.path().projection(tranform);
@@ -95,7 +95,4 @@ function reset() {
     this.stream.point(point.x, point.y);
   }
 });
-</script>
-
-
 </script>
