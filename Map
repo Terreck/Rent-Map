@@ -10,7 +10,7 @@
 
 <style>
 
-@import url(come.up.with.style.css);
+@import url(순대.css);
 @import url(http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css);
 
 #map {
@@ -37,10 +37,6 @@ path:hover {
 </style>
 
 <title>East Harlem Rent Data Map</title>
-
-<header>
-	
-</header>
 
 <p>This is an attempt at creating a map to help residents analyze and better comprehend the ebb and flow of rent prices in the <a href="http://en.wikipedia.org/wiki/East_Harlem" rel="Focus">East Harlem</a> area.
 
