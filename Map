@@ -2,8 +2,6 @@
 <html class="I LIKE TOFU AND KIMCHI">
 <html lang="en-US">
 
-<title>East Harlem Rent Data Map</title>
-
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width"/>
 <meta name="Keywords" content="Rent, Data, Map, East, Harlem, New York City"/>
@@ -14,7 +12,6 @@
 
 @import url(come.up.with.style.css);
 @import url(http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css);
-@import url(http://i.imgur.com/ysjIk.gif);
 
 #map {
 	width: 960px;
@@ -39,6 +36,8 @@ path:hover {
 
 </style>
 
+<title>East Harlem Rent Data Map</title>
+
 <header>
 	<a href="http://en.wikipedia.org/wiki/East_Harlem" rel="Focus">East Harlem</a>
 </header>
@@ -52,29 +51,29 @@ path:hover {
 <footer>
 </footer>
 
-<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 
 <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.2/leaflet.js"></script>
 
 <script>
 
-var map = new L.Map("map", {center: [30. 30], 4})
-    .addLayer(new L.TileLayer("https://a.tiles.mapbox.com/v3/terreck.hk2khe0p/page.html?secure=1#14/40.8018/-73.9310.png"));
+var map = new L.Map("map", {center: [40.8, -73.94 ], zoom: 14})
+    .addLayer(new L.TileLayer("http://{s}.tiles.mapbox.com/v3/examples.map-vyofok3q/{z}/{x}/{y}.png"));
 
 var svg = d3.select(map.getPanes().overlayPane).append("svg"),
     g = svg.append("g").attr("class", "leaflet-zoom-hide");
 
-d3.json("/nyan/nyan/NYC.json", function(collection) {
+d3.json("/home/turniphead/BetaNYC/Rent Map/shape-files/nycdata/shap/NYC.json", function(collection) {
+	var transform = d3.gro.transform({point: projectPoint}),
+		path=d3.geo.path().projection(tranform);
 
-var transform = d3.gro.transform({point: projectPoint}),
-	path=d3.geo.path().projection(tranform);
+	var feature = g.selectAll("path")
+		.data(collection.features)
+		.enter().append("path");
 
-var feature = g.selectAll("path")
-.data(collection.features)
-.enter().append("path");
+	map.on("viewreset", reset);
+	reset();
 
-map.on("viewreset", reset);
-reset();
 function reset() {
     var bounds = path.bounds(collection),
         topLeft = bounds[0],
@@ -95,4 +94,7 @@ function reset() {
     this.stream.point(point.x, point.y);
   }
 });
+</script>
+
+
 </script>
