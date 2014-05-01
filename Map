@@ -39,10 +39,10 @@ path:hover {
 <title>East Harlem Rent Data Map</title>
 
 <header>
-	<a href="http://en.wikipedia.org/wiki/East_Harlem" rel="Focus">East Harlem</a>
+	
 </header>
 
-<p>This is an attempt at creating a map to help residents analyze and better comprehend the ebb and flow of rent prices in the East Harlem area.
+<p>This is an attempt at creating a map to help residents analyze and better comprehend the ebb and flow of rent prices in the <a href="http://en.wikipedia.org/wiki/East_Harlem" rel="Focus">East Harlem</a> area.
 
 <p>
 
