@@ -8,9 +8,12 @@
 <meta name="Description" content="Rent Data on East Harlem"/>
 <meta name="HandheldFriendly" content="True"/>
 
+<head>
+<link rel="stylesheet" type="text/css" href="순대.css">
+</head>
+
 <style>
 
-@import url(순대.css);
 @import url(http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css);
 
 #map {
