@@ -8,9 +8,8 @@
 <meta name="Description" content="Rent Data on East Harlem"/>
 <meta name="HandheldFriendly" content="True"/>
 
-<head>
-<link rel="stylesheet" type="text/css" href="순대.css">
-</head>
+<link rel="stylesheet" href="순대.css" type="text/css" />
+
 
 <style>
 
